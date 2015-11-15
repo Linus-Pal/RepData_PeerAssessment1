@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 ---
 title: "PA1_template"
 author: "Linus-Pal"
 date: "Sunday, November 15, 2015"
 output: html_document
 ---
+=======
+>>>>>>> 96a6ae0a8c263dc1423fbee18468eb0c171acf04
 ##Reproducible Research: Peer Assessment 1
 
 ##Load required packages
@@ -53,7 +56,11 @@ median(StepsTotal$steps)
 
 #What is the average daily activity pattern?
 
+<<<<<<< HEAD
 ### Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
+=======
+### Make a time series plot (i.e. type = â€œlâ€) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
+>>>>>>> 96a6ae0a8c263dc1423fbee18468eb0c171acf04
 
 ### Plot for mean of steps and time series
 
@@ -127,7 +134,11 @@ median(StepsTotalnew$steps)
 
 ### For this part the weekdays() function may be of some help here. Use the dataset with the filled-in missing values for this part.
 
+<<<<<<< HEAD
 ### 1.Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
+=======
+### 1.Create a new factor variable in the dataset with two levels ? ?weekday? and ?weekend? indicating whether a given date is a weekday or weekend day.
+>>>>>>> 96a6ae0a8c263dc1423fbee18468eb0c171acf04
 
 ```{r, echo=TRUE}
 day <- weekdays(activity$date)
@@ -147,7 +158,11 @@ activity$daylevel <- factor(activity$daylevel)
 stepsByDay <- aggregate(steps ~ interval + daylevel, data = activity, mean)
 names(stepsByDay) <- c("interval", "daylevel", "steps")
 ```
+<<<<<<< HEAD
 ### 2.Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). 
+=======
+### 2.Make a panel plot containing a time series plot (i.e. type = â€œlâ€) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). 
+>>>>>>> 96a6ae0a8c263dc1423fbee18468eb0c171acf04
 ```{r, echo=TRUE}
 xyplot(steps ~ interval | daylevel, stepsByDay, type = "l", layout = c(1, 2),xlab = "Interval", ylab = "Number of steps")
 ```
